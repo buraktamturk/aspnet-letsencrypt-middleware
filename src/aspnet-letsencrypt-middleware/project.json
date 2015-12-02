@@ -1,0 +1,21 @@
+﻿{
+  "version": "1.0.0-rc1-final",
+  "authors": [ "Burak Tamtürk" ],
+  "description": "LetsEncrypt integration draft as ASP.NET 5 middleware. Feel free to improve it.",
+  "dependencies": {
+    "Microsoft.AspNet.Http": "1.0.0-rc1-final",
+    "Microsoft.AspNet.WebApi.Client": "5.2.3"
+  },
+  "frameworks": {
+    "dnx451": {
+      "frameworkAssemblies": {
+        "System.Net.Http": "4.0.0.0"
+      }
+    },
+    "dnxcore50": {
+      "dependencies": {
+        "System.Net.Http": "4.0.0-beta-22816"
+      }
+    }
+  }
+}
