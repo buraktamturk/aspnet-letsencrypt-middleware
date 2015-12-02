@@ -23,10 +23,10 @@ namespace sample
             app.UseLetsEncrypt(new LetsEncryptMiddlewareOptions
             {
                 useProxyMode = false,
-                proxyPrefix = "http://vpn.buraktamturk.org",
+                proxyPrefix = "https://vpn.buraktamturk.org",
 
                 usePutMode = true,
-                preSharedKey = "Burak.1453",
+                preSharedKey = "PRE-SHARED-KEY-HERE",
             });
 
             app.Run(async (context) =>
