@@ -55,6 +55,9 @@ namespace org.buraktamturk.aspnet.LetsEncryptMiddleware
                         ContentType = context.Request.ContentType,
                         data = data
                     };
+
+                    context.Response.StatusCode = 200;
+                    return;
                 } else if(context.Request.Method == "GET") {
                     LetsEncryptMiddlewareChallengeItem data;
                     if(_cache.challenges.TryGetValue(context.Request.Path, out data)) {
@@ -62,6 +65,7 @@ namespace org.buraktamturk.aspnet.LetsEncryptMiddleware
                         context.Response.ContentLength = data.data.Length;
                         await context.Response.Body.WriteAsync(data.data, 0, data.data.Length);
                         await context.Response.Body.FlushAsync();
+                        return;
                     }
                 }
             }
