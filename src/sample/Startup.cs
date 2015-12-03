@@ -23,7 +23,7 @@ namespace sample
             app.UseLetsEncrypt(new LetsEncryptMiddlewareOptions
             {
                 useProxyMode = false,
-                proxyPrefix = "https://vpn.buraktamturk.org",
+                proxyPrefix = "https://vpn.buraktamturk.org/.well-known",
 
                 usePutMode = true,
                 preSharedKey = "PRE-SHARED-KEY-HERE",

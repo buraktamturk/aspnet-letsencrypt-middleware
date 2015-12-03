@@ -12,7 +12,7 @@ Proxy mode forwards all .well-known requests to another server. It does not have
 app.UseLetsEncrypt(new LetsEncryptMiddlewareOptions
 {
     useProxyMode = true,
-    proxyPrefix = "https://vpn.buraktamturk.org"
+    proxyPrefix = "https://vpn.buraktamturk.org/.well-known"
 });
 ```
 
