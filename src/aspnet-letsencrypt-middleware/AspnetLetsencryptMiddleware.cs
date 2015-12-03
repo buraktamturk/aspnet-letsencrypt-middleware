@@ -73,6 +73,7 @@ namespace org.buraktamturk.aspnet.LetsEncryptMiddleware
                 {
                     context.Response.ContentType = response.Content.Headers.ContentType.ToString();
                     await data.CopyToAsync(context.Response.Body);
+                    await context.Response.Body.FlushAsync();
                     return;
                 }
             }
