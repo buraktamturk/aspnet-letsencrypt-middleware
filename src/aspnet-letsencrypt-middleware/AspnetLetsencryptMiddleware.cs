@@ -75,7 +75,7 @@ namespace org.buraktamturk.aspnet.LetsEncryptMiddleware
                 using(var response = await http.GetAsync(_options.proxyPrefix + context.Request.Path))
                 using(var data = await response.Content.ReadAsStreamAsync())
                 {
-                    context.Response.ContentType = response.Content.Headers.ContentType.ToString();
+                    context.Response.ContentType = response.Content?.Headers?.ContentType?.ToString();
                     await data.CopyToAsync(context.Response.Body);
                     await context.Response.Body.FlushAsync();
                     return;

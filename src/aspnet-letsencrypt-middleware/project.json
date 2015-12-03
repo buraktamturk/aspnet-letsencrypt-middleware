@@ -1,5 +1,5 @@
 ﻿{
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [ "Burak Tamtürk" ],
   "description": "LetsEncrypt integration draft as ASP.NET 5 middleware. Feel free to improve it.",
   "dependencies": {
